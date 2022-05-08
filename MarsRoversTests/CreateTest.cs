@@ -25,9 +25,9 @@ namespace MarsRoversTests
             _create.CreatePlateau(_x, _y, roversInPlateau);
 
             // assert
-            Assert.Equal(6, Plateua.X);
-            Assert.Equal(8, Plateua.Y);
-            Assert.Empty(Plateua.RoverOnPlateau);
+            Assert.Equal(6, Plateau.X);
+            Assert.Equal(8, Plateau.Y);
+            Assert.Empty(Plateau.RoverOnPlateau);
         }
 
         [Fact]

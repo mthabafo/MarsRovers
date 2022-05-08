@@ -11,9 +11,9 @@ namespace MarsRovers
     {
         public void CreatePlateau(int X, int Y, List<Rover> roversInPlateau)
         {
-            Plateua.X = X;
-            Plateua.Y = Y;
-            Plateua.RoverOnPlateau = roversInPlateau;
+            Plateau.X = X;
+            Plateau.Y = Y;
+            Plateau.RoverOnPlateau = roversInPlateau;
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace MarsRovers
         /// <returns> True if the point is within the plateau or flase if not</returns>
         public bool IsPointInPlateau(int X, int Y)
         {
-            if ((X >= 0 && X <= Plateua.X) && Y >= 0 && Y <= Plateua.Y)
+            if ((X >= 0 && X <= Plateau.X) && Y >= 0 && Y <= Plateau.Y)
                 return true;
             return false;
         }

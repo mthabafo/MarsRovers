@@ -7,7 +7,7 @@ namespace MarsRovers
     /// <summary>
     /// Creates a plateau with cartesian coordinates and list of rovers on the plateau
     /// </summary>
-    public static class Plateua
+    public static class Plateau
     {
         public static int X { get; set; }
         public static int Y { get; set; }
