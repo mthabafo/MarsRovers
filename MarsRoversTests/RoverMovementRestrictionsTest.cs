@@ -35,7 +35,8 @@ namespace MarsRoversTests
         public void IsNextGridOccupied() 
         {
             // arrange
-
+            Plateau.X = 5;
+            Plateau.Y = 5;
             _roversInPlateau = new List<Rover>();
             Rover rover = new Rover();
             _roverInPlateau = new Rover();
@@ -59,6 +60,7 @@ namespace MarsRoversTests
         [Fact]
         public void CanRoverMove() 
         {
+
         }
     }
 }

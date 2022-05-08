@@ -12,6 +12,11 @@ namespace MarsRovers
     {
         private Create _create = new Create();
         private Rover _rover;
+
+
+        /// <summary>
+        /// Reads input from a text file and controls the rover movement using helper functions 
+        /// </summary>
         public void ProcessInput()
         {
              string textFile = @"C:\MarsRoversInstructions\Instructions.txt";
@@ -57,6 +62,12 @@ namespace MarsRovers
                 throw new FileLoadException();
         }
 
+        /// <summary>
+        /// Moves the rover 
+        /// </summary>
+        /// <param name="instruction"> Instruction to control the rover </param>
+        /// <param name="rover"> Initial position of the rover</param>
+        /// <returns> Final position of the rover </returns>
         public Rover ExecuteInstructions(string instruction, Rover rover)
         {
             RoverActions roverActions = new RoverActions();
@@ -82,8 +93,8 @@ namespace MarsRovers
                         break;
                 }
             }
-            return rover;
-         
+
+            return rover;        
         }
  
         public void DisplayOutput(string initialPosistion, string finalPosition)
