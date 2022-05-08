@@ -4,8 +4,8 @@ Version 1.0.0
 ## Using The Program
 Simple C# console program that controls a squad of rovers deployed in a plateau in Mars. It takes input user input from a text file, to add input create a folder named MarsRoverInstructions
 in C drive and add a txt file named instructions. The first line of input must be the coordinates of the plateau, thereafter every pair of lines represents a rover's initial position
-and instruction respectively. "\n"
-    Sample Input: "\n"
+and instruction respectively.
+    Sample Input:
     5 5
     1 2 N
     LMLMLMLMM
