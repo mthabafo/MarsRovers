@@ -37,8 +37,6 @@ namespace MarsRoversTests
             Assert.Equal(_finalRoverPosition.X, newRoverPosition.X);
             Assert.Equal(_finalRoverPosition.Y, newRoverPosition.Y);
             Assert.Equal(_finalRoverPosition.Direction, newRoverPosition.Direction);
-            // Assert.Same(_finalRoverPosition, newRoverPosition);
-            // Assert.
         }
     }
 }
