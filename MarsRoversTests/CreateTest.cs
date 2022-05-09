@@ -17,16 +17,16 @@ namespace MarsRoversTests
         public void CreatePlateau_NoneNegaviteIntegers_NewPlateau()
         {
             // arrange
-            this._x = 6;
-            this._y = 8;
+            this._x = 5;
+            this._y = 5;
             this.roversInPlateau = new List<Rover>();
 
             // act           
             _create.CreatePlateau(_x, _y, roversInPlateau);
 
             // assert
-            Assert.Equal(6, Plateau.X);
-            Assert.Equal(8, Plateau.Y);
+            Assert.Equal(5, Plateau.X);
+            Assert.Equal(5, Plateau.Y);
             Assert.Empty(Plateau.RoverOnPlateau);
         }
 

@@ -10,7 +10,7 @@ namespace MarsRoversTests
         private MarsRovers.RoverActions _roverAction = new MarsRovers.RoverActions();
 
         [Fact]
-        public void RotateLeft()
+        public void RotateLeft_InitialDirection_FinalDirection()
         {
             // arrange
             _rover.X = 1;
@@ -25,7 +25,7 @@ namespace MarsRoversTests
         }
 
         [Fact]
-        public void RotateRight()
+        public void RotateRight_InitialDirection_FinalDirection()
         {
             // arrange
             _rover.X = 1;
@@ -40,7 +40,7 @@ namespace MarsRoversTests
         }
 
         [Fact]
-        public void MoveForward()
+        public void MoveForward_InitialPosition_FinalPosition()
         {
             // arrange
             _rover.X = 1;

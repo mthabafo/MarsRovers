@@ -18,6 +18,7 @@ namespace MarsRoversTests
         {
             // arrange 
             _rover = new Rover();
+
             Plateau.X = 3;
             Plateau.Y = 2;
             _rover.X = 3;
@@ -43,7 +44,7 @@ namespace MarsRoversTests
 
             _roverInPlateau.X = 2;
             _roverInPlateau.Y = 1;
-            _roverInPlateau.Direction = "N";
+            _roverInPlateau.Direction = "E";
             _roversInPlateau.Add(_roverInPlateau);
 
             rover.X = 1;
@@ -54,13 +55,7 @@ namespace MarsRoversTests
             bool gridOccupied = _roverMovementRestrictions.IsNextGridOccupied(rover.X, rover.Y, rover);
 
             // assert
-            Assert.True(gridOccupied);
-        }
-      
-        [Fact]
-        public void CanRoverMove() 
-        {
-
+            Assert.False(gridOccupied);
         }
     }
 }

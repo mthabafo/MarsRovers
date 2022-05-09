@@ -16,6 +16,9 @@ namespace MarsRoversTests
         public void MoveRover_InitialPositonAndInstruction_FinalPosition() 
         {
             // arrange
+            Plateau.X = 5;
+            Plateau.Y = 5;
+            Plateau.RoverOnPlateau = new List<Rover>();
             _initalRoverPosition.X = 1;
             _initalRoverPosition.Y = 2;
             _initalRoverPosition.Direction = "N";
@@ -31,7 +34,11 @@ namespace MarsRoversTests
             newRoverPosition = _roverController.MoveRover(instruction, _initalRoverPosition);
 
             // assert
-            Assert.Equal(_finalRoverPosition, newRoverPosition);
+            Assert.Equal(_finalRoverPosition.X, newRoverPosition.X);
+            Assert.Equal(_finalRoverPosition.Y, newRoverPosition.Y);
+            Assert.Equal(_finalRoverPosition.Direction, newRoverPosition.Direction);
+            // Assert.Same(_finalRoverPosition, newRoverPosition);
+            // Assert.
         }
     }
 }
