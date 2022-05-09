@@ -14,7 +14,7 @@ namespace MarsRoversTests
         private List<Rover> _roversInPlateau;
 
         [Fact]
-        public void IsRoverInBorder() 
+        public void IsRoverInBoundary_ValuesInBorder_True() 
         {
             // arrange 
             _rover = new Rover();
@@ -25,7 +25,7 @@ namespace MarsRoversTests
             _rover.Direction = "E";
 
             // act
-            bool isInBorder = _roverMovementRestrictions.IsRoverInBorder(_rover);
+            bool isInBorder = _roverMovementRestrictions.IsRoverInBoundary(_rover);
 
             // assert
             Assert.True(isInBorder);

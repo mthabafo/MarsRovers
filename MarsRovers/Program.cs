@@ -7,7 +7,7 @@ namespace MarsRovers
         static void Main(string[] args)
         {
             RoverController roverController = new RoverController();
-            roverController.ProcessInput();
+            roverController.Execute();
         }
     }
 }

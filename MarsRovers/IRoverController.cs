@@ -9,8 +9,7 @@ namespace MarsRovers
     /// </summary>
     public interface IRoverController
     {
-        void ProcessInput();
-        Rover ExecuteInstructions(string instruction, Rover rover);
-        void DisplayOutput(string initialPosistion, string finalPosition);
+        void Execute();
+        Rover MoveRover(string instruction, Rover rover);
     }
 }

@@ -17,7 +17,7 @@ namespace MarsRovers
         /// <summary>
         /// Reads input from a text file and controls the rover movement using helper functions 
         /// </summary>
-        public void ProcessInput()
+        public void Execute()
         {
              string textFile = @"C:\MarsRoversInstructions\Instructions.txt";
 
@@ -50,25 +50,27 @@ namespace MarsRovers
                         Console.WriteLine(String.Format("Rover {0}", ++roverNumber));
                         Console.WriteLine(String.Format("Initial position: {0} {1} {2}", _rover.X, _rover.Y, _rover.Direction));
 
-                        Rover newRoverPosition = ExecuteInstructions(instruction, _rover);
+                        Rover newRoverPosition = MoveRover(instruction, _rover);
                        
                         Console.WriteLine(String.Format("Final position: {0} {1} {2}", newRoverPosition.X, newRoverPosition.Y, newRoverPosition.Direction));
+
+                        Console.WriteLine("_____________________________________________");
 
                         Plateau.RoverOnPlateau.Add(newRoverPosition);
                     }
                 }
             }
             else
-                throw new FileLoadException();
+                throw new FileNotFoundException("The specified file path was not found");
         }
 
         /// <summary>
-        /// Moves the rover 
+        /// Moves the rover according to the instruction given
         /// </summary>
         /// <param name="instruction"> Instruction to control the rover </param>
         /// <param name="rover"> Initial position of the rover</param>
         /// <returns> Final position of the rover </returns>
-        public Rover ExecuteInstructions(string instruction, Rover rover)
+        public Rover MoveRover(string instruction, Rover rover)
         {
             RoverActions roverActions = new RoverActions();
             RoverMovementRestrictions roverMovementRestrictions = new RoverMovementRestrictions();
@@ -96,12 +98,5 @@ namespace MarsRovers
 
             return rover;        
         }
- 
-        public void DisplayOutput(string initialPosistion, string finalPosition)
-        {
-            throw new NotImplementedException();
-        }
-
-
     }
 }

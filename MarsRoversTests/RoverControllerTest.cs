@@ -13,7 +13,7 @@ namespace MarsRoversTests
         private RoverController _roverController = new RoverController();
 
         [Fact]
-        public void ExecuteInstructions() 
+        public void MoveRover_InitialPositonAndInstruction_FinalPosition() 
         {
             // arrange
             _initalRoverPosition.X = 1;
@@ -28,7 +28,7 @@ namespace MarsRoversTests
             string instruction = "LMLMLMLMM";
 
             // act
-            newRoverPosition = _roverController.ExecuteInstructions(instruction, _initalRoverPosition);
+            newRoverPosition = _roverController.MoveRover(instruction, _initalRoverPosition);
 
             // assert
             Assert.Equal(_finalRoverPosition, newRoverPosition);

@@ -14,7 +14,7 @@ namespace MarsRoversTests
         private List<Rover> roversInPlateau;
 
         [Fact]
-        public void CreatePlateau()
+        public void CreatePlateau_NoneNegaviteIntegers_NewPlateau()
         {
             // arrange
             this._x = 6;
@@ -31,7 +31,7 @@ namespace MarsRoversTests
         }
 
         [Fact]
-        public void CreateRover() 
+        public void CreateRover_ValidValues_NewRover() 
         {
             // arrange
             this._x = 2;
@@ -49,6 +49,23 @@ namespace MarsRoversTests
 
         }
 
-      //  public void IsPointInPlateau(int X, int Y) { }
+        [Fact]
+        public void IsPointInPlateau_PointsInPlateau_True() 
+        {
+            // arrange
+            Plateau.X = 5;
+            Plateau.X = 5;
+
+            this._x = 2;
+            this._y = 3;
+            this._direction = "N";
+            Rover rover = new Rover();
+
+            // act           
+            bool isInPlateau = _create.IsPointInPlateau(_x, _y);
+
+            // assert
+            Assert.True(isInPlateau);
+        }
     }
 }

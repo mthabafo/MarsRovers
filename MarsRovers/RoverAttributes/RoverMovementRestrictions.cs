@@ -18,7 +18,7 @@ namespace MarsRovers
         /// <returns> True if rover can move and false if it can not </returns>
         public bool CanRoverMove(int x, int y, Rover rover)
         {
-            if (IsNextGridOccupied(x, y, rover) || IsRoverInBorder(rover))
+            if (IsNextGridOccupied(x, y, rover) || IsRoverInBoundary(rover))
                 return false;
             return true;
         }
@@ -66,7 +66,7 @@ namespace MarsRovers
         /// </summary>
         /// <param name="rover"> Rover object</param>
         /// <returns> True if rover can't move and false if it can move </returns>
-        public bool IsRoverInBorder(Rover rover)
+        public bool IsRoverInBoundary(Rover rover)
         {
             if (rover.X == Plateau.X && rover.Direction == "E")  // Rover is at the right border and facing right and cannot move forward
                 return true;
